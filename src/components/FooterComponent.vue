@@ -141,16 +141,16 @@ footer{
     width:100%;
     background-color: black;
     padding: 2rem;
+
+    font-family: 'Cabin', sans-serif;
     color: white;
+
     li{
         list-style-type: none;
     }
+
     a{
         color: white;
-    }
-    .link-footer{
-        display: flex;
-
     }
     .social{
         display: flex;
@@ -158,14 +158,17 @@ footer{
             margin: 0.4rem 1rem
         }
     }
+
     h3{
         color: #F8F8F8;
     }
+
     a{
         i{
             font-size: 1.5rem;
         }
     }
+
     p{
         width: 415px;
         height: 52px;
@@ -185,11 +188,11 @@ footer{
         border-radius: 2px;
         background-color: black;
     }
+
     #inputEmail2{
         background-color: black;
         border-radius: 2px;
         color: white;
-    }
-    
+    }    
 }
 </style>
