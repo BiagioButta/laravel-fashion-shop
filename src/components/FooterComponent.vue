@@ -15,7 +15,11 @@
                         <button type="submit" class="btn btn-dark mb-3">Submit</button>
                     </div>
                 </form>
-
+                <ul class="social mt-4">
+                    <li class="nav-item" v-for="(item, index) in policy" :key="index">
+                        <span>{{ item.label }}</span>
+                    </li>
+                </ul>
             </div>
             <div>
                 <ul><h3 class="text-uppercase">About Boolgary</h3>
@@ -43,7 +47,7 @@
                         <a :href="item.link"><i :class="item.label"></i></a>
                     </li>
                 </ul>
-            </div>
+            </div>            
         </div>        
     </footer>
 </template>
@@ -126,10 +130,27 @@
                         label: 'sede legale',
                         contacts: 'Milano Via Giorgio Battisti 5'
                     }
+                ],                
+                policy: [
+                    {
+                        label: 'Privacy Policy',
+                        link: '#'
+                    },
+                    {
+                        label: 'Terms Of Use',
+                        link: '#'
+                    },
+                    {
+                        label: 'Accessibility',
+                        link: '#'
+                    },
+                    {
+                        label: 'Cookie Setting',
+                        link: '#'
+                    }
                 ]
             }
-        }
-        
+        }        
     }
 </script>
 
