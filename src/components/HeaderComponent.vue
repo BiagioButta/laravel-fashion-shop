@@ -29,8 +29,8 @@
                     <img src="../assets/image/logo.png" alt="" class="invert">
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
-                    <a href="#"><i class="fa-regular fa-user fa-xl"></i></a>                    
+                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
+                    <a href="#"><i class="fa-regular fa-user fa-xl" style="color: black;"></i></a>                    
                 </div>
             </div>
         </nav>
