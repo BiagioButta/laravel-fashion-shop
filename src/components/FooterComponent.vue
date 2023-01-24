@@ -158,6 +158,9 @@ footer{
             margin: 0.4rem 1rem
         }
     }
+    h3{
+        color: #F8F8F8;
+    }
     a{
         i{
             font-size: 1.5rem;
