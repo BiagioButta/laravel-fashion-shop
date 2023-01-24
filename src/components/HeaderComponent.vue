@@ -1,49 +1,33 @@
 <template>
-    <!-- <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Boolgari</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item " v-for="(item, index) in menuItems" :key="index">
-                        <router-link :to="{name : item.routeName}" class="nav-link">{{ item.label }}</router-link>
-                </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
-    </header> -->
-
-    <div id="mainNavigation">
-        <nav role="navigation">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="search">
+    <header>
+        <div id="mainNavigation">
+            <nav role="navigation">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="search">
                         <form>
                             <input type="search" placeholder="Search...">
                         </form>
                     </div>
-                <div class="py-3 text-center border-bottom">
-                    <img src="../assets/image/logo.png" alt="" class="invert">
+                    <div class="py-3 text-center border-bottom">
+                        <img src="../assets/image/logo.png" alt="" class="invert">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
+                        <a href="#"><i class="fa-regular fa-user fa-xl" style="color: black;"></i></a>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-between align-items-center">
-                    <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
-                    <a href="#"><i class="fa-regular fa-user fa-xl" style="color: black;"></i></a>                    
+            </nav>
+            <div class="navbar-expand-md">
+                <div class="d-flex justify-content-around align-items-center text-center mt-3" id="navbarNavDropdown">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item " v-for="(item, index) in menuItems" :key="index">
+                            <router-link :to="{ name: item.routeName }" class="nav-link">{{ item.label }}</router-link>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-        <div class="navbar-expand-md">            
-            <div class="d-flex justify-content-around align-items-center text-center mt-3" id="navbarNavDropdown">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item " v-for="(item, index) in menuItems" :key="index">
-                        <router-link :to="{ name: item.routeName }" class="nav-link">{{ item.label }}</router-link>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        </div>        
+    </header>    
 </template>
 
 
@@ -93,22 +77,12 @@
         z-index: 123;
         padding-bottom: 120px;
 
-
-
     a {
         font-family: 'Cabin', sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)}
-        a.dropdown-toggle {
-            color: #dfdfdf !important
-        }
-    
-        a.dropdown-item:hover {
-            color: #000 !important
-        }
-
         .nav-item {
             min-width: 12vw;
 
@@ -121,7 +95,6 @@
                 color: #fff;
             }
         }
-    #navbarNavDropdown.collapsing .navbar-nav, 
     #navbarNavDropdown.show .navbar-nav {
         background: #000;
         padding: 12px;
@@ -172,14 +145,5 @@ input::-webkit-input-placeholder {
 
 input:focus::-webkit-input-placeholder {
     color: #333;
-}
-
-
-// ICONE CART E USER
-.navigation{
-
-    i{
-        color: #000;
-    }
 }
 </style>
