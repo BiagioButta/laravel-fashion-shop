@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div id="mainNavigation" class="">
+        <div id="mainNavigation" class="container">
             <nav role="navigation">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="search">
