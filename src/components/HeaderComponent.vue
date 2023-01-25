@@ -109,6 +109,8 @@
 }
 
 .search input[type=search] {
+    position: absolute;
+    top: 20px;
     outline: none;
     box-sizing: content-box;
     font-size: 100%;
