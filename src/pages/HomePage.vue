@@ -1,6 +1,3 @@
-
-import HeroComponent from '../components/HeroComponent.vue';
-
 <template>
     <HeroComponent />
 </template>
