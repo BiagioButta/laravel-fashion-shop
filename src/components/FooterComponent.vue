@@ -163,6 +163,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/styles/main.scss";
 footer{
     // position:absolute;
     bottom:0;
