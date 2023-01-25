@@ -69,6 +69,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/styles/main.scss";
 #mainNavigation {
     // position: fixed;
         top: 0;
@@ -84,12 +85,10 @@
         letter-spacing: 2px;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)}
         .nav-item {
-            min-width: 12vw;
-
+            min-width: 10vw;
             a {
                 color: #000;
             }
-
             a:hover {
                 background-color: #000;
                 color: #fff;
