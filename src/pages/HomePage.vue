@@ -1,13 +1,19 @@
+
+import HeroComponent from '../components/HeroComponent.vue';
+
 <template>
-    <div>
-        <h1>home</h1>
-    </div>
+    <HeroComponent />
 </template>
 
 <script>
+import HeroComponent from '../components/HeroComponent.vue';
+
     export default {
-        name: 'HomePage'
-    }
+        name: 'HomePage',
+        components: {
+            HeroComponent,
+        },
+    };
 </script>
 
 <style lang="scss" scoped>
