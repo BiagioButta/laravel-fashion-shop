@@ -156,7 +156,7 @@
 
 <style lang="scss" scoped>
 footer{
-    position:absolute;
+    // position:absolute;
     bottom:0;
     left:0;
     width:100%;
