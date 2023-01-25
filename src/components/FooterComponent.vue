@@ -47,7 +47,15 @@
                         <a :href="item.link"><i :class="item.label"></i></a>
                     </li>
                 </ul>
-            </div>            
+            </div>
+            <div class="row g-3">
+                <div class="col-12">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.69229921411596!2d9.135191680080435!3d45.461700603835304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c22ab05c3bbf%3A0xa481aa5be8d54a11!2sBoolean%20SRLS!5e0!3m2!1sen!2sin!4v1674661132049!5m2!1sen!2sin"
+                        width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>        
     </footer>
 </template>
