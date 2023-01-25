@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div id="mainNavigation">
+        <div id="mainNavigation" class="container">
             <nav role="navigation">
                 <div class="d-flex justify-content-between align-items-center">
                     <div class="search">
@@ -17,8 +17,8 @@
                     </div>
                 </div>
             </nav>
-            <div class="navbar-expand-md">
-                <div class="d-flex justify-content-around align-items-center text-center mt-3" id="navbarNavDropdown">
+            <div class="navbar-expand-md py-3">
+                <div class="d-flex justify-content-around align-items-center text-center" id="navbarNavDropdown">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item " v-for="(item, index) in menuItems" :key="index">
                             <router-link :to="{ name: item.routeName }" class="nav-link">{{ item.label }}</router-link>
@@ -75,7 +75,7 @@
         left: 0;
         width: 100%;
         z-index: 123;
-        padding-bottom: 120px;
+        // padding-bottom: 20px;
 
     a {
         font-family: 'Cabin', sans-serif;
