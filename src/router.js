@@ -33,9 +33,8 @@ const router = createRouter({
         },
         {
             path:'/products/:slug',
-            name: 'single-products',
+            name: 'single-products',           // la s
             component: SingleProduct
-
         },
         {
             path: "/*",
