@@ -5,7 +5,7 @@
         <div class="card-body text-center">
             <h5 class="card-title py-3 text-capitalize">{{ product.name }}</h5>
             <p class="card-text">{{ product.description }}</p>
-            <router-link class="btn btn-primary" :to="{ name: 'single-page', params: { slug: product.slug } }">
+            <router-link class="btn btn-primary" :to="{ name: 'single-products', params: { slug: product.slug } }">
                 Vedi il post
             </router-link>
         </div>

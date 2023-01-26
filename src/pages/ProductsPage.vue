@@ -28,7 +28,7 @@ export default {
     data() {
         return {
             store,
-            product: [],
+            products: [],
             currentPage: 1,
             lastPage: null,
             total: 0,
@@ -42,8 +42,8 @@ export default {
                     page: pagenum
                 }
             }).then((response) => {
-                console.log(response.data.results);
-                this.product = response.data.results.data;
+                console.log(response.data.results.data);
+                this.products = response.data.results.data;
                 this.currentPage = response.data.results.current_page;
                 this.lastPage = response.data.results.last_page;
                 this.total = response.data.results.total;
