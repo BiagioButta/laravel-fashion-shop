@@ -1,10 +1,12 @@
 <template>
     <div class="text-center">
-        <h1>404</h1>
-        <h3>Oops,this page not found!</h3>
-        <p>The link might be corrupted.</p>
-        <h6>or the page may have been removed</h6>
-        <button type="button" class="btn btn-dark">Go back home</button>
+        <h1 class="m-3">Error 404</h1>
+        <img src="../assets/image/error.png" alt="Immagine di un gatto che guarda un cactus">
+        <p class="m-auto mt-4">Oops, The page you are looking for might be removed or is temporarily unavailable.Try going back to the previous page or
+        see our <a href="#">Help Center</a> for more information</p>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center my-5">
+       <router-link :to="{path:'/'}"><button type="button" class="btn btn-dark border-0 btn-lg px-5">Return to Homepage</button></router-link>
     </div>
 </template>
 
@@ -19,16 +21,16 @@ body{
     background-color: #F4F4F4;
 }
 h1{
-    color: #030303;
-}
-h3{
-    color:#747474;
+    color: #5F504B;
 }
 p{
-    color:#ada1a1;
+    font-size: 16px;
+    color:#030303;
+    width: 550px;
 }
 
-h6{
-    color: #030303;
+button{
+    border-radius: 0;
+    background-color: #030303;
 }
 </style>
