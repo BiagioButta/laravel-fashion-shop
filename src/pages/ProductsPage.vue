@@ -59,7 +59,7 @@ export default {
     mounted() {
         this.getproduct(1);
     },
-    // components: 
+    components: {ProductCard}
 }
 </script>
 
