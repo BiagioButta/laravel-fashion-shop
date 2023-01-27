@@ -2,6 +2,7 @@
     <HeroComponent />
     <FindShade />
     <AboutComponent />
+    <DiscoverComponent/>
 
 </template>
 
@@ -9,6 +10,7 @@
 import HeroComponent from '../components/HeroComponent.vue'; 
 import FindShade from '../components/FindShade.vue'; 
 import AboutComponent from '../components/AboutComponent.vue'; 
+import DiscoverComponent from '../components/DiscoverComponent.vue'; 
 
 
     export default {
@@ -17,6 +19,7 @@ import AboutComponent from '../components/AboutComponent.vue';
             HeroComponent,
             FindShade,
             AboutComponent,
+            DiscoverComponent,
         },
     };
 </script>
