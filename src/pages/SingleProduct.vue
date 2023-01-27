@@ -14,10 +14,10 @@
             <div>
                 <h5>Category: {{ product.category.name }}</h5>
             </div>
-            <div v-if="product.tags && product.tags.length > 0">
+            <div v-if="product.tag && product.tag.length > 0">
                 <h5>Tags</h5>
                 <div>
-                    <span v-for="(tag, index) in product.tags" :key="index" class="badge text-bg-info">{{
+                    <span v-for="(tag, index) in product.tag" :key="index" class="badge text-bg-info">{{
                         tag.name
                     }}</span>
                 </div>
