@@ -52,7 +52,7 @@ div{
     color: black;
     .text{
         text-align: center;
-        padding: 20px;
+        padding-top: 30px;
     }
     .cards-discover{
         padding: 80px 80px;
@@ -70,7 +70,7 @@ div{
                 height: 70px;
                 color: white;
                 text-align: center;
-                background-color: rgba(0, 0, 0, 0.212);
+                background-color: rgba(0, 0, 0, 0.400);
                 i{
                     font-size: 12px;
                 }

@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="text">
-            <h2><strong>About</strong> Boolgary</h2>
+            <h2 class="mt-3"><strong>About</strong> Boolgary</h2>
         </div>
-        <div class="cards-about d-flex">
+        <div class="cards-about d-flex justify-content-evenly align-items-start">
             <div class="card-about">
                 <img src="../assets/image/love.png" alt="">
                 <h5>Reliable</h5>
@@ -38,17 +38,19 @@
 
 <style lang="scss" scoped>
 div{
-    background-color: rgb(255, 236, 251);
+    background-color: #FFF3F2;
     color: black;
     .text{
+        font-family: 'Open Sans', sans-serif;
         text-align: center;
-       padding: 20px;
+        padding: 20px;
     }
     .cards-about{
         padding: 0 50px;
         .card-about{
             text-align: center;
             padding: 20px;
+            width: 300px;
             h5{
                 margin: 10px;
             }
