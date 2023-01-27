@@ -1,11 +1,14 @@
 <template>
     <HeroComponent />
     <FindShade />
+    <AboutComponent />
+
 </template>
 
 <script>
 import HeroComponent from '../components/HeroComponent.vue'; 
 import FindShade from '../components/FindShade.vue'; 
+import AboutComponent from '../components/AboutComponent.vue'; 
 
 
     export default {
@@ -13,6 +16,7 @@ import FindShade from '../components/FindShade.vue';
         components: {
             HeroComponent,
             FindShade,
+            AboutComponent,
         },
     };
 </script>
