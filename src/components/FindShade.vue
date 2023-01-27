@@ -37,6 +37,11 @@ div{
             color: white;
             border: 1px solid white;
             margin-top: 20px;
+            transition: all 0.5s;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
         }
     }
     .img{
