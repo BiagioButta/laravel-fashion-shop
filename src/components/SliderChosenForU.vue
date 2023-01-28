@@ -1,44 +1,102 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
+
+      <div class="d-flex">
+        <div class="col-lg-4 " v-for=" (product, index) in products " :key="index">
+          <div  v-if="index <3 ">
+              <ProductCard :product="product" />
+          </div>
+        </div>
+      </div>
+      
     </div>
+
+
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+
+      <div class="d-flex">
+        <div class="col-lg-4 " v-for=" (product, index) in products " :key="index">
+          <div  v-if="index < 3 ">
+              <ProductCard :product="product" />
+          </div>
+        </div>
+      </div>
     </div>
+
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+
+      <div class="d-flex">
+        <div class="col-lg-4 " v-for=" (product, index) in products " :key="index">
+          <div  v-if="index < 3 ">
+              <ProductCard :product="product" />
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
+
 </template>
 
 <script>
-    import { store } from '../store';
+  import axios from 'axios';
+  import { store } from '../store';
 
-    import ProductCard from './ProductCard.vue';
-    export default {
-    name: "SliderChosenForU",
+  import ProductCard from './ProductCard.vue';
+    
+  export default {
+    name: "SliderChosenForY",
+    components: {
+        ProductCard
+    },
     data() {
         return {
-            store
+            store,
+            products: [],
+            currentPage: 1,
+            lastPage: null,
+            total: 0,
+            contentMaxLen: 100
         };
     },
-    components: { ProductCard }
+    methods: {
+        getproduct(pagenum) {
+            axios.get(`${this.store.apiBaseUrl}/products`, {
+                params: {
+                    page: pagenum
+                }
+            }).then((response) => {
+                console.log(response.data.results.data);
+                this.products = response.data.results.data;
+                this.currentPage = response.data.results.current_page;
+                this.lastPage = response.data.results.last_page;
+                this.total = response.data.results.total;
+            });
+        },
+        truncateContent(text) {
+            if (text.length > this.contentMaxLen) {
+                return text.substr(0, this.contentMaxLen) + "...";
+            }
+            return text;
+        }
+    },
+    mounted() {
+        this.getproduct(1);
+    },
 }
 </script>
 

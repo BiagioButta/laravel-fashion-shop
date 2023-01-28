@@ -8,8 +8,8 @@
                             <input type="search" placeholder="Search...">
                         </form>
                     </div>
-                    <div class="py-3 text-center border-bottom">
-                        <img src="../assets/image/logo.png" alt="" class="invert">
+                    <div class="py-3 text-center border-bottom"> 
+                        <router-link :to="{ name: homeImg[0] }" class="nav-link"><img src="../assets/image/logo.png" alt="" class="invert"></router-link>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
@@ -38,8 +38,8 @@
             return {
                 menuItems: [
                     {
-                        label: 'Home',
-                        routeName: ''
+                        label: 'Shop All',
+                        routeName: 'products'
                     },
                     {
                         label: 'Makeup',
@@ -61,7 +61,10 @@
                         label: 'Explore',
                         routeName: ''
                     }
-                ]
+                ],
+                homeImg: [
+                    'home'
+                ],
             }
         }
         
