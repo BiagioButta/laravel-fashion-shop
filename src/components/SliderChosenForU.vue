@@ -1,5 +1,9 @@
 <template>
 
+  <div class="container mt-5">
+
+  <h2 class="text-center mb-3">Choosen For U</h2>
+  
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -47,6 +51,8 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+  </div>
+
 
 
 

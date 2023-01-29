@@ -1,10 +1,11 @@
 <template>
     <footer>
-        <div>
+        <div class="text-center">
             <img class="logo mb-4" src="../assets/image/logo-2.png" alt="">
         </div>
-        <div class="d-flex justify-content-around">
+        <div class="d-flex  justify-content-around">
             <div>
+                <h3 class="text-uppercase">Newsletter</h3>
                 <p>Sign up for email updates on products, launches, and events. Unsubscribe anytime</p>
                 <form class="row g-3">
                     <div class="col-auto">
@@ -15,11 +16,6 @@
                         <button type="submit" class="btn btn-dark mb-3">Submit</button>
                     </div>
                 </form>
-                <ul class="social mt-4">
-                    <li class="nav-item" v-for="(item, index) in policy" :key="index">
-                        <span>{{ item.label }}</span>
-                    </li>
-                </ul>
             </div>
             <div>
                 <ul><h3 class="text-uppercase">About Boolgary</h3>
@@ -42,21 +38,33 @@
                         <span>{{ item.label }}:  </span> <span> {{ item.contacts }}</span>
                     </li>
                 </ul>
-                <ul class="social">
-                    <li class="nav-item" v-for="(item, index) in social" :key="index">
-                        <a :href="item.link"><i :class="item.label"></i></a>
-                    </li>
-                </ul>
+                
             </div>
             <div class="row g-3">
                 <div class="col-12">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.69229921411596!2d9.135191680080435!3d45.461700603835304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c22ab05c3bbf%3A0xa481aa5be8d54a11!2sBoolean%20SRLS!5e0!3m2!1sen!2sin!4v1674661132049!5m2!1sen!2sin"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d494.69229921411596!2d9.135191680080435!3d45.461700603835304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c22ab05c3bbf%3A0xa481aa5be8d54a11!2sBoolean%20SRLS!5e0!3m2!1sen!2sin!4v1674661132049!5m2!1sen!2sin"
                         width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-        </div>        
+        </div>    
+        <hr><div class="text-success"></div><hr>
+        <div class="d-flex justify-content-between align-items-center">
+        
+            <ul class="social mt-4">
+                <li class="nav-item" v-for="(item, index) in policy" :key="index">
+                    <span>{{ item.label }}</span>
+                </li>
+            </ul>
+
+            <ul class="social">
+                <li class="nav-item" v-for="(item, index) in social" :key="index">
+                    <a :href="item.link"><i :class="item.label"></i></a>
+                </li>
+            </ul>
+        </div>
+  
     </footer>
 </template>
 
@@ -184,8 +192,10 @@ footer{
     }
     .social{
         display: flex;
+        
         li{
-            margin: 0.4rem 1rem
+            margin: 0.4rem;
+            margin-right: 1rem;
         }
     }
 

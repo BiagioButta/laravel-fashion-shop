@@ -4,6 +4,7 @@
     <SliderChosenForU/>
     <AboutComponent />
     <DiscoverComponent/>
+    
 
 </template>
 
@@ -16,16 +17,18 @@ import DiscoverComponent from '../components/DiscoverComponent.vue';
 import ProductCard from '../components/ProductCard.vue';
 
 
+
     export default {
         name: 'HomePage',
         components: {
-            HeroComponent,
-            FindShade,
-            SliderChosenForU,
-            AboutComponent,
-            DiscoverComponent,
-            ProductCard
-        },
+    HeroComponent,
+    FindShade,
+    SliderChosenForU,
+    AboutComponent,
+    DiscoverComponent,
+    ProductCard,
+   
+},
     };
 </script>
 
