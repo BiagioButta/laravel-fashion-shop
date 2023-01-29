@@ -95,4 +95,9 @@ export default {
 
 <style lang="scss" scoped>
 
+button{
+    color: black;
+    text-decoration: none;
+}
+
 </style>
