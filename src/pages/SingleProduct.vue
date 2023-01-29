@@ -1,34 +1,4 @@
 <template>
-
-    <!-- link prodotto: product.product_link
-        product.price
-        product.brand
-        product.texture
-        product.available
-     -->
-
-    <!--    <section v-if="product">
-            <h1>{{ product.name }}</h1>
-            <img :src="`${store.imagBasePath}${product.image}`" class="card-img-top" :alt="product.name">
-            <p>{{ product.description }}</p>
-            <div>
-                <h5>Category: {{ product.category.name }}</h5>
-            </div>
-            <div v-if="product.tag && product.tag.length > 0">
-                <h5>Tags</h5>
-                <div>
-                    <span v-for="(tag, index) in product.tag" :key="index" class="badge text-bg-info">{{
-                        tag.name
-                    }}</span>
-                </div>
-            </div>
-        </section>
-    </div>
- -->
-
-
-
-
     <!-- Product section-->
     <section class="py-5" v-if="product">
         <div class="container px-4 px-lg-5 my-5">
