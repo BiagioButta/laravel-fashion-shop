@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
             <div>
-                <h1>products</h1>
+                <h1>Shop All </h1>
             </div>
             <div class="col-lg-4" v-for=" (product, index) in products " :key="index">
                 <ProductCard :product="product" />
@@ -60,7 +60,7 @@ export default {
                     page: pagenum
                 }
             }).then((response) => {
-                console.log(response.data.results.data);
+                // console.log(response.data.results.data);
                 this.products = response.data.results.data;
                 this.currentPage = response.data.results.current_page;
                 this.lastPage = response.data.results.last_page;
@@ -82,8 +82,8 @@ export default {
                    this.currentPage = response.data.results.current_page;
                    this.lastPage = response.data.results.last_page;
                    this.total = response.data.results.total;
-                })
-            } 
+            })
+        }
         
       
     },
