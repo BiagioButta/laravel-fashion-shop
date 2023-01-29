@@ -32,12 +32,28 @@
     <!-- Product section-->
     <section class="py-5" v-if="product">
         <div class="container px-4 px-lg-5 my-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="row gx-4 gx-lg-5 ">
                 <div class="col-md-6 left">
-                <div class="img"><img class="card-img-top mb-5 mb-md-0" :src="`${store.imagBasePath}${product.image}`" :alt="product.name"></div>
-                    <!-- <img class="card-img-top mb-5 mb-md-0" :src="`${store.imagBasePath}${product.image}`" :alt="product.name"> -->
+                    <div class="img"><img class="card-img-top mb-5 mb-md-0" :src="`${store.imagBasePath}${product.image}`" :alt="product.name"></div>
+                    <div class="btn-slider">
+                        <button><i class="fa-solid fa-camera"></i> Find Your Shade</button>
+                    </div>
+                    <div>
+                        <h4>Product Details</h4>
+                        <p>What it is: In the land between bare skin and makeup makeup exists the imperceptible wash of color that is Perfecting Skin Tin</p>
+                    </div>
+                    <hr class="hr">
+                    <div>
+                        <h5>Why it is special :</h5>
+                        <ul>
+                            <li> Breathable, ultra-thin formula evens out skin's appearance for a smooth, dewy finish</li>
+                            <li>Diamond Powder gives a brightening, soft-focus effect and minimizes the appearance of pores, while Glycerin moisturizes skin</li>
+                        </ul>
+                    </div>
+                    
                 </div>
                 <div class="col-md-6 right">
+                <div class="destra">
                     <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                     <div class="fs-5 mb-5">
                         <span>{{ product.price }} €</span>
@@ -79,11 +95,14 @@
                             <div class="card-review-footer">
                                 <span>66 people found this helpful</span>
                             </div>
-                            <div>
-                                <button class="">Read all reviews</button>
-                            </div>
+                            
+                        </div>
+                        <div>
+                                <button class="btn-review">Read all reviews</button>
                         </div>
                     </div>
+                </div>
+                    
                 </div>
             </div>
         </div>
@@ -130,35 +149,45 @@ export default {
 
 <style lang="scss" scoped>
 .left{
-    .img{
-        position: relative;
-        top: -10rem;
+   
+    hr.hr{
+        margin: 1rem 0;
+    }
+    .btn-slider{
+        margin: 1rem 0;
+        text-align: center;
+        button{
+            padding: 0.5rem 2rem;
+            background-color: white;
+        }
     }
 }
-.btn-bag{
-    background-color: rgb(31, 31, 31);
-    color: white;
-    padding: 0.5rem 12rem;
-}
-.return{
-    padding: 1rem 30%;
-    text-align: center;
-    a{
-        color: black;
+.right{
+   
+    .destra{
+                .btn-bag{
+            background-color: rgb(31, 31, 31);
+            color: white;
+            padding: 0.5rem 12rem;
+        }
+        .return{
+            padding: 1rem 30%;
+            text-align: center;
+            a{
+                color: black;
+            }
+        }
+        .card-review{
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border: 1px solid rgb(34, 33, 33);
+        }
+        .btn-review{
+                padding: 0.5rem 14.7rem;
+                background-color: rgb(26, 26, 26);
+                color: white;
+            }
     }
 }
-.card-review{
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border: 1px solid rgb(34, 33, 33);
-    .card-review-head{
 
-    }
-    .card-review-body{
-        
-    }
-    .card-review-footer{
-        
-    }
-}
 </style>

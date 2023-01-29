@@ -2,9 +2,6 @@
 
     <div class="container">
         <div class="row d-flex justify-content-center mt-5">
-            <div>
-                <h2>Shop All </h2>
-            </div>
             <div class="col-lg-4" v-for=" (product, index) in products " :key="index">
                 <ProductCard :product="product" />
 
