@@ -33,138 +33,54 @@
     <section class="py-5" v-if="product">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                        :src="`${store.imagBasePath}${product.image}`" :alt="product.name"></div>
-                <div class="col-md-6">
+                <div class="col-md-6 left">
+                <div class="img"><img class="card-img-top mb-5 mb-md-0" :src="`${store.imagBasePath}${product.image}`" :alt="product.name"></div>
+                    <!-- <img class="card-img-top mb-5 mb-md-0" :src="`${store.imagBasePath}${product.image}`" :alt="product.name"> -->
+                </div>
+                <div class="col-md-6 right">
                     <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
                     <div class="fs-5 mb-5">
                         <span>{{ product.price }} €</span>
-
+                        <div >
+                            <span v-for="n in 4"><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star-half"></i></span>
+                            <span>  (4.5) (2456 reviews)</span>
+                        </div>
                     </div>
                     <p class="lead">{{ product.description }}</p>
                     <div class="d-flex">
                         <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
                             style="max-width: 3rem" />
-                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <button class="btn-bag" type="button">
                             <i class="bi-cart-fill me-1"></i>
-                            Add to cart
+                            Add to Bag € {{ product.price }} 
                         </button>
+                        
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Related items section-->
-    <section class="py-5 bg-light">
-        <div class="container px-4 px-lg-5 mt-5">
-            <h2 class="fw-bolder mb-4">Related products</h2>
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
-                                <!-- Product price-->
-                                $40.00 - $80.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View
-                                    options</a>
-                            </div>
-                        </div>
+                    <div class="return">
+                            <span><a href="#">Free & Easy Return</a></span>
                     </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Sale
+                    <hr>
+                    <div>
+                        <div>
+                            <h2>Review Highlights</h2>
                         </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
+                        <div  v-for="n in 2" class="card-review">
+                            <div class="card-review-head">
+                                <span v-for="n in 4"><i class="fa-solid fa-star"></i></span>
+                                <span><i class="fa-solid fa-star-half"></i></span>
+                                <span>  (4.5)</span>
                             </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
-                                    cart</a>
+                            <div class="card-review-body">
+                                <p>
+                                    I m surprised I don t see this recommended for older skin all the time. I love the way this floats over my pores instead of highlighting them like foundations with more coverage. I can t believe it took me so ... <strong>Read More</strong>
+                                </p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                            Sale
-                        </div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
-                                <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
+                            <div class="card-review-footer">
+                                <span>66 people found this helpful</span>
                             </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
-                                    cart</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <!-- Product price-->
-                                $40.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to
-                                    cart</a>
+                            <div>
+                                <button class="">Read all reviews</button>
                             </div>
                         </div>
                     </div>
@@ -172,7 +88,7 @@
             </div>
         </div>
     </section>
-
+    
 
 
 </template>
@@ -213,5 +129,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.left{
+    .img{
+        position: relative;
+        top: -10rem;
+    }
+}
+.btn-bag{
+    background-color: rgb(31, 31, 31);
+    color: white;
+    padding: 0.5rem 12rem;
+}
+.return{
+    padding: 1rem 30%;
+    text-align: center;
+    a{
+        color: black;
+    }
+}
+.card-review{
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgb(34, 33, 33);
+    .card-review-head{
 
+    }
+    .card-review-body{
+        
+    }
+    .card-review-footer{
+        
+    }
+}
 </style>
