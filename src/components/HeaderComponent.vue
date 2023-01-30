@@ -8,8 +8,9 @@
                             <input type="search" placeholder="Search...">
                         </form>
                     </div>
-                    <div class="py-3 text-center border-bottom"> 
-                        <router-link :to="{ name: homeImg[0] }" class="nav-link"><img src="../assets/image/logo.png" alt="" class="invert"></router-link>
+                    <div class="py-3 text-center border-bottom">
+                        <router-link :to="{ name: homeImg[0] }" class="nav-link"><img src="../assets/image/logo.png"
+                                alt="" class="invert"></router-link>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
@@ -26,77 +27,71 @@
                     </ul>
                 </div>
             </div>
-        </div>        
-    </header>    
+        </div>
+    </header>
 </template>
 
 
 <script>
-    export default {
-        name: 'AppHeader',
-        data(){
-            return {
-                menuItems: [
-                    {
-                        label: 'Shop All',
-                        routeName: 'products'
-                    },
-                    {
-                        label: 'Makeup',
-                        routeName: ''
-                    },
-                    {
-                        label: 'Shop Our Sets',
-                        routeName: ''
-                    },
-                    {
-                        label: 'Find Your Shade',
-                        routeName: ''
-                    },
-                    {
-                        label: 'Sale',
-                        routeName: ''
-                    },
-                    {
-                        label: 'Explore',
-                        routeName: ''
-                    }
-                ],
-                homeImg: [
-                    'home'
-                ],
-            }
+export default {
+    name: 'AppHeader',
+    data() {
+        return {
+            menuItems: [
+                {
+                    label: 'Products',
+                    routeName: 'products'
+                },
+                {
+                    label: 'Brands',
+                    routeName: ''
+                },
+                {
+                    label: 'Contact Us',
+                    routeName: ''
+                }
+            ],
+            homeImg: [
+                'home'
+            ],
         }
-        
     }
+
+}
 </script>
 
 <style lang="scss" scoped>
 @import "../assets/styles/main.scss";
+
 #mainNavigation {
     // position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 123;
-        // padding-bottom: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 123;
+    // padding-bottom: 20px;
 
     a {
         font-family: 'Cabin', sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 2px;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)}
-        .nav-item {
-            min-width: 10vw;
-            a {
-                color: #000;
-            }
-            a:hover {
-                background-color: #000;
-                color: #fff;
-            }
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4)
+    }
+
+    .nav-item {
+        min-width: 10vw;
+
+        a {
+            color: #000;
         }
+
+        a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+
     #navbarNavDropdown.show .navbar-nav {
         background: #000;
         padding: 12px;
