@@ -4,11 +4,11 @@
 
     <h2 class="text-center mb-3">Choosen For You</h2>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
 
-          <div class="d-flex">
+          <div class="d-flex gap-3 me-5">
             <div class="col-lg-4 " v-for=" (product, index) in products " :key="index">
               <ProductCard :product="product" />
             </div>
