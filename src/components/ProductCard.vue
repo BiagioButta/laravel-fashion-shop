@@ -47,8 +47,8 @@
                             €</a></span>
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
                         <router-link class="text-center"
-                            :to="{ name: 'single-products', params: { slug: product.slug } }"><a
-                                class="btn btn-outline-dark mt-auto" href="#">Scopri</a></router-link>
+                            :to="{ name: 'single-products', params: { slug: product.slug } }"><button
+                                class="button mt-2" href="#">Scopri</button></router-link>
                     </div>
                 </div>
             </article>

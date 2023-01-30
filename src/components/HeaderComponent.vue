@@ -45,6 +45,10 @@ export default {
         return {
             menuItems: [
                 {
+                    label: 'HomePage',
+                    routeName: 'home'
+                },
+                {
                     label: 'Products',
                     routeName: 'products'
                 },
