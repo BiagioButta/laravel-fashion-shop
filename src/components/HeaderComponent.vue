@@ -58,7 +58,7 @@ export default {
                 },
                 {
                     label: 'Contact Us',
-                    routeName: ''
+                    routeName: 'contact'
                 }
             ],
             homeImg: [
