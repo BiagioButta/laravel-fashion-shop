@@ -13,7 +13,13 @@
                                 alt="" class="invert"></router-link>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
-                        <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a>
+                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#cart"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i><span class="badge text-bg-secondary total-count"></span></button>
+                        <!-- <a href="#"><i class="fa-solid fa-cart-shopping fa-xl mx-2" style="color: black;"></i></a> -->
+                        <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+                                    <span class="visually-hidden">unread messages</span>
+                                </span> -->
+                                <!-- (<span class="total-count"></span>) -->
                         <a href="#"><i class="fa-regular fa-user fa-xl" style="color: black;"></i></a>
                     </div>
                 </div>

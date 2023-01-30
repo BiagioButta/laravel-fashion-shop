@@ -32,6 +32,36 @@
                         <div class="fs-5 mb-5">
                             <p class="display-6">{{ product.price }} €</p>
                             <div>
+                <div class="destra">
+                    <h1 class="display-5 fw-bolder">{{ product.name }}</h1>
+                    <div class="fs-5 mb-5">
+                        <span>{{ product.price }} €</span>
+                        <div >
+                            <span v-for="n in 4"><i class="fa-solid fa-star"></i></span>
+                            <span><i class="fa-solid fa-star-half"></i></span>
+                            <span>  (4.5) (2456 reviews)</span>
+                        </div>
+                    </div>
+                    <p class="lead">{{ product.description }}</p>
+                    <div class="d-flex">
+                        <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1"
+                            style="max-width: 3rem" />
+                        <button class="btn-bag" type="button" data-name="{{ product.name }}" data-price="{{ product.price }}">    <!-- QUA -->
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to Bag € {{ product.price }} 
+                        </button>
+                        
+                    </div>
+                    <div class="return">
+                            <span><a href="#">Free & Easy Return</a></span>
+                    </div>
+                    <hr>
+                    <div>
+                        <div>
+                            <h2>Review Highlights</h2>
+                        </div>
+                        <div  v-for="n in 2" class="card-review">
+                            <div class="card-review-head">
                                 <span v-for="n in 4"><i class="fa-solid fa-star"></i></span>
                                 <span><i class="fa-solid fa-star-half"></i></span>
                                 <span> (4.5) (2456 reviews)</span>
