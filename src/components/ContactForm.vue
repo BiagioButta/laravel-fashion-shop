@@ -2,7 +2,7 @@
     <section class="contact_me py-5">
         <div class="inner-wrapper">
             <div class="container-fluid text-center">
-                <h2 class="text-uppercase">contact me</h2>
+                <h2 class="text-uppercase">contattaci</h2>
                 <div v-if="success" class="alert alert-success text-start" role="alert">Messaggio inviato con successo
                 </div>
                 <div class="row">
@@ -24,7 +24,7 @@
                                 rows="10" placeholder="Message" v-model="message"
                                 :class="{ 'is-invalid': errors.message }"></textarea>
                         </div>
-                        <button class="btn btn-lg btn-primary text-white" type="submit" :disabled="loading">{{
+                        <button class="button" type="submit" :disabled="loading">{{
                             loading?
                         'sending..': 'Send'
                         }}</button>
