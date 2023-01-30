@@ -34,7 +34,7 @@
 
     <section class="cards">
         <div class="col mb-5">
-            <article class="card card--1">
+            <article class="card card--1 text-center">
                 <div class="card__img"></div>
                 <a href="#" class="card_link">
                     <div class="card__img--hover"><img :src="`${store.imagBasePath}${product.image}`"
